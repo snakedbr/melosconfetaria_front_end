@@ -19,7 +19,7 @@
     </nav>
     <div class="container">
         <div class="form-container">
-            <h2><b>Cadastrar Categoria</b></h2>
+            <h2><b>Gerenciamento Categoria</b></h2>
             <form id="categoria-form">
                 <fieldset>
                     <label for="nome_categoria">Nome categoria:</label>
@@ -28,6 +28,15 @@
                         <button type="submit">SALVAR</button>
                         <button type="button">CANCELAR</button>
                     </div>
+                </fieldset>
+            </form>
+            <form id="excluir-categoria-form">
+                <fieldset>
+                    <label for="excluir_categoria">Excluir Categoria:</label>
+                    <select id="excluir_categoria" name="excluir_categoria">
+                        <option value="">Selecione uma categoria</option>
+                    </select>
+                    <button type="submit">EXCLUIR</button>
                 </fieldset>
             </form>
         </div>

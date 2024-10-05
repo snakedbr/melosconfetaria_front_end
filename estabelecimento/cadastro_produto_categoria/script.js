@@ -58,12 +58,15 @@ function carregarCategorias() {
             return response.json();
         })
         .then(categorias => {
-            const selectCategoria = document.getElementById("categoria");
+            const selectCategoria = document.getElementById("excluir_categoria");
+            const selectCategoriaProduto = document.getElementById("categoria");
+            selectCategoria.innerHTML = '';
             categorias.forEach(categoria => {
                 const option = document.createElement("option");
-                option.value = categoria.id;
+                option.value = categoria.id_categoria;
                 option.textContent = categoria.nome_categoria;
                 selectCategoria.appendChild(option);
+                selectCategoriaProduto.appendChild(option);
             });
         })
         .catch(error => {
@@ -104,6 +107,33 @@ function cadastroCategoria() {
     });
 }
 
+function excluirCategoria() {
+    const select = document.getElementById("excluir_categoria");
+    const id_categoria = select.options[select.selectedIndex].value;
+    
+    console.log('id_categoria:', id_categoria);
+    
+    if (id_categoria === "") {
+        alert("Por favor, selecione uma categoria para excluir.");
+        return;
+    }
+
+    fetch(`http://localhost:8080/categorias/${id_categoria}`, {
+        method: 'DELETE'
+    })
+    .then(function (res) {
+        if (res.ok) {
+            alert("Categoria excluída com sucesso!");
+            window.location.reload();
+        } else {
+            alert("Erro ao excluir categoria.");
+        }
+    })
+    .catch(function (error) {
+        console.log(error);
+        alert("Erro ao excluir categoria.");
+    });
+}
 // Função para limpar formulário de categoria
 function limparCategoria() {
     Icategoria.value = "";
@@ -111,6 +141,12 @@ function limparCategoria() {
 
 // Eventos
 document.addEventListener("DOMContentLoaded", carregarCategorias);
+const excluirCategoriaForm = document.getElementById("excluir-categoria-form");
+
+excluirCategoriaForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    excluirCategoria();
+});
 
 produtos.addEventListener('submit', function (event) {
     event.preventDefault();
