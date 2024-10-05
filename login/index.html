@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melo's Confeitaria</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="./script.js" defer></script> <!-- link do script para vincular back e front-->
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-navbar">
+            <img src="imgs/logo.png" alt="Logo Navbar">
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Navbar simples na lateral superior esquerda -->
+        <!-- Formulário de login na lateral esquerda -->
+        <div class="login-box">
+            <div class="form-container">
+
+                <form>
+                    <label for="login">Login:</label>
+                    <input type="text" class="login" id="login" name="login" placeholder="Digite seu login">
+
+                    <label for="senha">Senha:</label>
+                    <input type="password" class="senha" id="senha" name="senha" placeholder="Digite sua senha">
+
+                    <!-- alterei o input type para password pois não vamos usar o email-->
+
+                    <button type="submit">Acessar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Lateral direita com a imagem e fundo rosa -->
+        <div class="side-image">
+            <img src="imgs/logo.png" alt="Melo's Confeitaria">
+        </div>
+    </div>
+</body>
+
+</html>
