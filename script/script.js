@@ -51,12 +51,23 @@ function criarElementoProduto(produto) {
 }
 
 function renderizarProdutos(produtos, container) {
-    container.innerHTML = ''; // Limpa o catálogo antes de renderizar
+    console.log('Renderizando produtos...');
+    if (!container) {
+        console.error('Container não encontrado!');
+        return;
+    }
+    container.innerHTML = '';
+    if (produtos.length === 0) {
+        container.innerHTML = ' <center><h3>Nenhum produto encontrado</h3></center>';
+        return;
+    }
     produtos.forEach((produto) => {
         const elemento = criarElementoProduto(produto);
         container.appendChild(elemento);
     });
 }
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     buscarProdutos();
