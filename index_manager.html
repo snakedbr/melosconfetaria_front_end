@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melos Confeitaria</title>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="/projeto_web/assets/css/index_manager.css" />
+    <!-- Link para o Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- header section starts  -->
+    <header class="header">
+        <a href="index_manager.html" class="logo"> <img src="/projeto_web/assets/imgs/logo.png" alt /> </a>
+        <div class="header-content">
+            <!-- Contêiner para o botão -->
+            <div class="left-content">
+                <button class="cadastrar-button" id="cadastrar-button">Cadastrar Produto</button>
+            </div>
+    
+            <!-- Contêiner para a barra de pesquisa e botão sair -->
+            <div class="right-content">
+                <div class="icons">
+                    <input type="text" class="searchTerm" placeholder="Pesquise seu produto">
+                    <button type="submit" class="searchButton">
+                        <a href="#">
+                            <i style="color: white;" class="fa fa-search"></i>
+                        </a>
+                    </button>
+                </div>
+                <button class="back-button" id="back-button">Sair</button>
+            </div>
+        </div>
+
+         <!-- Menu colapsável para o modo responsivo -->
+         <div class="mobile-menu" id="mobile-menu">
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+            <div class="menu-content" id="menu-content">
+                <button class="cadastrar-button"  href="/projeto_web/cadastro_produto.html" id="cadastrar-button-mobile">Cadastrar Produto</button>
+                <button class="back-button" id="back-button-mobile">Sair</button>
+            </div>
+        </div>
+    </div>
+    
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- menu section starts  -->
+
+    <section class="menu" id="menu">
+        <h1 class="heading">LISTA DE PRODUTOS</h1>
+
+        <div class="box-container" id="containerCatalogo"></div>
+    </section>
+
+    <!-- menu section ends -->
+
+    <!-- footer section starts  -->
+
+    <footer class="footer" id="contacts">
+        <!-- contact section starts  -->
+
+        <!-- contact section ends -->
+
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com/melos.confeitaria_/" class="fab fa-instagram"></a>
+        </div>
+
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#about">Sobre</a>
+            <a href="#menu">Menu</a>
+            <a href="#contacts">Contatos</a>
+        </div>
+
+        <div class="credit">criado por <span>Davi Aragão e Gabriel Corrêa</span></div>
+    </footer>
+
+    <!-- footer section ends -->
+
+    <!-- custom js file link  -->
+    <script src="/projeto_web/assets/js/index_manager.js"></script>
+</body>
+
+</html>
